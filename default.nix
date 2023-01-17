@@ -35,6 +35,5 @@ in
 
     installPhase = ''
       install -Dm755 ./nocodb -t $out/bin
-      #mv ./lib $out/lib
     '';
   }
