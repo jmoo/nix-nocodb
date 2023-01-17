@@ -10,7 +10,6 @@ if [[ "$version" = "" ]]; then
   version="$(
     nix shell 'nixpkgs#rsstail' -c rsstail -u "$feed" -HN1 |
       sed -E 's/[ ]*([^:]+).*/\1/' |
-      sort -r |
       head -n 1
   )"
 fi
