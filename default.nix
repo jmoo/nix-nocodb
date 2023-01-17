@@ -34,7 +34,6 @@ in
     unpackPhase = "cp ${bin} ./nocodb";
 
     installPhase = ''
-      ls -la
       install -Dm755 ./nocodb -t $out/bin
       #mv ./lib $out/lib
     '';
